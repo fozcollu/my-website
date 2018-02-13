@@ -1,0 +1,27 @@
+<br>
+<br>
+<br>
+<div class="container-fluid">
+    <h4 class="text-center text-info">List of Project</h4><br>
+    <table class="table">
+
+        <thead>
+            <tr>
+                <th scope="col">Project's Name</th>
+                <th scope="col">Project's Duration</th>
+                <th scope="col">Duration</th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tr *ngFor="let project of ProjectList | async">
+            <td>{{project.name}}</td>
+            <td>{{project.description}}</td>
+            <td>{{project.duration}}</td>
+           
+            <td><button type="button" class="btn btn-warning" (click)="openEdit(project)">Edit</button></td>
+        </tr>
+    </table>
+ 
+   
+
+   

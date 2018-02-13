@@ -1,0 +1,36 @@
+[{
+    
+    "name":"UKD Hesaplama",
+    "description":"Satranc puanı hesaplama",
+    "duration":15
+
+},
+{
+    "name":"Uçak Bileti Satıs",
+    "description":"Uçak bilet satışı ve rezerve edilmesi",
+    "duration":7
+},
+{
+    "name":"Otopark Projesi",
+    "description":"Boş ve dolu otopark yerlerinin gösterimi",
+    "duration":10
+
+},
+{ 
+    "name":"QSA Mobile",
+    "description":"Sağlık programı",
+    "duration":80
+
+},
+{
+    "name":"Liv Form Mobile",
+    "description":"Liv form onaylama programı",
+    "duration":20
+
+},
+{
+    "name":"Ulaştırma Araç İzleme",
+    "description":"Araç izleme",
+    "duration":60
+
+}]

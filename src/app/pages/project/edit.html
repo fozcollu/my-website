@@ -1,0 +1,29 @@
+
+  <div class="modal-header" >
+    <h4 class="modal-title pull-left">{{title}}</h4>
+    <button type="button" class="close pull-right" aria-label="Close" (click)="bsModalRef.hide()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body ml-2" >
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Project's Name</th>
+          <th scope="col">Project's Duration</th>
+          <th scope="col">Duration</th>
+
+        </tr>
+      </thead>
+      <tr>
+        <td><input type="text" [(ngModel)]="model.name"></td>
+        <td><input type="text" [(ngModel)]="model.description"></td>
+        <td><input type="text" [(ngModel)]="model.duration"></td>
+
+      </tr>
+    </table>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-primary" (click)="bsModalRef.hide()">Save Changes</button>
+    <button type="button" class="btn btn-default" (click)="bsModalRef.hide()">{{closeBtnName}}</button>
+  </div>
