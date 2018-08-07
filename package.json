@@ -25,6 +25,7 @@
     "@angular/router": "^5.2.4",
     "@ng-bootstrap/ng-bootstrap": "^2.0.2",
     "angular-font-awesome": "^3.1.2",
+    "angular-google-maps": "^2.4.1",
     "angular-gridster2": "^2.4.16",
     "core-js": "^2.4.1",
     "font-awesome": "^4.7.0",

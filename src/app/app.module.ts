@@ -52,6 +52,7 @@ import { MapComponent } from 'app/pages/map/map';
     
     
 ],
+
   providers: [ DataService],
   bootstrap: [MenuComponent]
 })

@@ -1,4 +1,7 @@
 <br>
 <br>
-<agm-map [latitude]="centerLat" [longitude]="centerLng">      
+<agm-map [latitude]="centerLat" [longitude]="centerLng">  
+        <agm-marker [latitude]="centerLat" [longitude]="centerLng">
+                <agm-info-window>{{infoText}}</agm-info-window>
+              </agm-marker>   
 </agm-map>

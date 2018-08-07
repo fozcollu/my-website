@@ -1,4 +1,43 @@
 <br>
 <br>
 <br>
-<h3>Contact Page</h3>
+<div class="container">
+    <form #form="ngForm" (submit)="submitForm(form)" novalidate>
+        <div class="jumbotron">
+            <h1>Contact</h1>
+        </div>
+        <div class="form-group" [class.has-error]="fullName.invalid && fullName.touched">
+            <label class="control-label">Name-Surname:</label>
+            <input #fullName="ngModel" type="text" required minlength="3" 
+            class="form-control" name="fullName" [(ngModel)]="model.fullName">
+            <div *ngIf="fullName.invalid && fullName.touched" class="alert alert-danger">Name is required and Min length is 3</div>
+        </div>
+        <div class="form-group" [class.has-error]="email.invalid && email.touched">
+            <label class="control-label">E-mail:</label>
+            <input #email="ngModel" type="text" required minlength="3" class="form-control" name="email" [(ngModel)]="model.email">
+            <div *ngIf="email.invalid && email.touched" class="alert alert-danger">E-mail is required</div>
+        </div>
+        <div class="form-group">
+            <label class="control-label">Comment:</label>
+            <input #comment="ngModel" type="text" class="form-control" name="comment" [(ngModel)]="model.comment" >
+        </div>
+        <label>Are you a Developer?</label>        
+        <div class="checkbox">
+            <label>
+                    <input type="checkbox" name="yazilimciMi" [(ngModel)]="model.yazilimciMi">
+                    I'm developer
+            </label>
+        </div>
+        <div class="form-group" [class.has-error]="hasLanguageError && language.dirty">
+            <label class="control-label">Main Language</label>
+            <select #language="ngModel" class="form-control" [(ngModel)]="model.language" 
+            name="language" (blur)="validateLanguage(language.value)" (changed)="validateLanguage(language.value)">
+                <option value="default">Select Language</option>
+                <option *ngFor="let lang of Languages">{{lang}}</option>
+            </select>
+            <div *ngIf="hasLanguageError && language.touched" class="alert alert-danger">Select Language Please</div>
+         </div>
+        <button class="btn btn-primary mb-5">Send</button>
+    </form>
+</div>
+<br><br>
